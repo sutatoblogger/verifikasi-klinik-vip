@@ -39,10 +39,13 @@
         .card h2 { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--primary); margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
         .card p { color: var(--text-dark); font-size: 15px; margin-bottom: 15px; }
 
-        /* Kriteria List */
-        .kriteria-list { list-style: none; margin-bottom: 20px; margin-top: 15px; }
-        .kriteria-list li { font-size: 14.5px; color: var(--text-dark); margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px; padding: 15px; background: var(--bg-main); border-radius: 8px; border-left: 3px solid var(--gold-rose); }
-        .kriteria-list li strong { color: var(--primary); display: block; margin-bottom: 3px; }
+        /* SOP List */
+        .sop-box { background-color: var(--bg-main); border: 1px dashed var(--gold-rose); padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        .sop-list { list-style: none; margin-bottom: 10px; margin-top: 10px; }
+        .sop-list li { font-size: 14px; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+        .sop-list li.yes::before { content: '✔️'; color: green; }
+        .sop-list li.no::before { content: '❌'; color: red; }
+        .sop-list li.no { color: var(--text-muted); }
 
         /* Bukti Proofing Area */
         .proof-gallery { display: flex; flex-direction: column; gap: 20px; margin-bottom: 25px; margin-top: 20px; }
@@ -52,6 +55,10 @@
         /* Keyword Tags */
         .keyword-container { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 25px; justify-content: center; }
         .kw-tag { background: var(--bg-main); border: 1px solid #e2e8f0; color: var(--text-muted); font-size: 12px; padding: 6px 14px; border-radius: 6px; font-weight: 600; }
+
+        /* External Links */
+        .link-live { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: transparent; border: 2px solid var(--primary); color: var(--primary); padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 14px; transition: 0.3s; text-transform: uppercase; letter-spacing: 0.5px; width: 100%; margin-top: 15px; }
+        .link-live:hover { background: var(--primary); color: #fff; box-shadow: 0 4px 12px rgba(214, 51, 108, 0.2); }
 
         /* CTA WhatsApp Buttons */
         .btn-wa { display: flex; justify-content: center; align-items: center; gap: 10px; background: linear-gradient(135deg, var(--primary), #a71d4c); color: #fff; font-size: 15px; font-weight: 800; padding: 18px 30px; border-radius: 50px; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s ease; box-shadow: 0 10px 25px rgba(214, 51, 108, 0.3); width: 100%; border: none; cursor: pointer; text-align: center; }
@@ -79,37 +86,10 @@
             <p class="subtitle">Sebuah apresiasi tertinggi untuk fasilitas kesehatan dan kecantikan yang telah memberikan standar pelayanan medis terbaik bagi masyarakat Tangerang Selatan dan sekitarnya.</p>
 
             <div class="card">
-                <h2>🏆 Selamat Kepada Klinik Terpilih!</h2>
-                <p>Berdasarkan hasil kurasi independen, analisis data digital, dan sentimen positif masyarakat, Tim Redaksi <strong>CiledugPromo</strong> telah menetapkan 10 Klinik Estetika Terbaik tahun ini.</p>
-                <p>Klinik Anda berhasil masuk ke dalam daftar eksklusif ini karena memenuhi 3 kriteria ketat kami:</p>
+                <h2>📈 Dominasi Penuh Halaman 1 Google</h2>
+                <p>Berdasarkan hasil riset independen dan kurasi tim redaksi <strong>CiledugPromo</strong>, portal direktori Top 10 Klinik Estetika kami saat ini <strong>Mendominasi Halaman 1 Google</strong>.</p>
                 
-                <ul class="kriteria-list">
-                    <li>
-                        <div>
-                            <strong>1. Standar Layanan & Medis</strong>
-                            Memiliki track record perawatan yang aman, diawasi oleh tenaga ahli/dokter, dan memiliki fasilitas yang higienis.
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <strong>2. Popularitas & Rating Pasien</strong>
-                            Mendapatkan ulasan positif secara konsisten dari masyarakat dan pasien lokal di wilayah Ciledug, Bintaro, dan sekitarnya.
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <strong>3. Dominasi Pencarian Digital</strong>
-                            Klinik Anda menjadi salah satu yang paling sering dicari oleh pasien melalui mesin pencari Google.
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <h2>📈 Visibilitas Maksimal di Google</h2>
-                <p>Sebagai bentuk apresiasi, daftar "10 Rekomendasi Klinik Estetika" ini telah kami optimasi secara khusus dan kini <strong>Mendominasi Halaman 1 Google</strong>.</p>
-                
-                <p>Ribuan calon pasien melihat nama klinik Anda setiap bulannya saat mereka mencari kata kunci berikut:</p>
+                <p>Ribuan calon pasien melihat daftar ini setiap bulannya saat mereka mencari kata kunci bernilai tinggi berikut:</p>
                 <div class="keyword-container">
                     <span class="kw-tag">Klinik Kecantikan Terbaik di Ciledug</span>
                     <span class="kw-tag">Klinik Kecantikan Terbaik di Bintaro</span>
@@ -122,18 +102,44 @@
                     <img src="bukti-google-01.webp" alt="Bukti Dominasi Kata Kunci Klinik Bintaro" class="proof-img" loading="lazy">
                     <img src="bukti-google-02.webp" alt="Bukti Dominasi Kata Kunci Klinik Ciledug" class="proof-img" loading="lazy">
                 </div>
+
+                <div style="margin-top: 25px; text-align: center; border-top: 1px dashed rgba(0,0,0,0.1); padding-top: 20px;">
+                    <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 5px;">Silakan verifikasi dan lihat langsung artikel kami yang sedang Live di Google:</p>
+                    <a href="https://ciledugpromo.biz.id/produk/11892/10-rekomendasi-klinik-kecantikan-estetika-terbaik-di-ciledug-bintaro" target="_blank" class="link-live">
+                        👁️ LIHAT ARTIKEL LIVE (KLIK DI SINI)
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>🎁 Undangan Klaim Slot (100% GRATIS)</h2>
+                <p>Saat ini, beberapa slot di artikel kami masih menggunakan <strong>nama anonim/fiktif</strong> sebagai <em>placeholder</em> sementara.</p>
+                <p>Berdasarkan riset tim redaksi terhadap ulasan positif bisnis Anda di Google Maps, kami ingin menawarkan Anda untuk <strong>mengganti nama fiktif tersebut dengan Nama Resmi Klinik Anda secara GRATIS.</strong></p>
+
+                <div class="sop-box">
+                    <p style="font-weight: bold; color: var(--primary); margin-bottom: 5px; font-size: 14px;">SOP PUBLIKASI BASIC LISTING (GRATIS):</p>
+                    <ul class="sop-list">
+                        <li class="yes">Pencantuman Nama Resmi Klinik Estetika.</li>
+                        <li class="yes">Pencantuman Deskripsi Singkat Layanan/Treatment Anda.</li>
+                        <li class="yes">Pencantuman Alamat Lengkap (Teks).</li>
+                        <li class="no">Tidak Termasuk: Akses Buka Sensor Nomor WhatsApp.</li>
+                        <li class="no">Tidak Termasuk: Tautan Tombol Reservasi Langsung.</li>
+                        <li class="no">Tidak Termasuk: Tautan Navigasi Google Maps.</li>
+                    </ul>
+                </div>
                 
-                <p style="font-size: 14px; color: var(--text-muted); margin-top: 15px; text-align: center;"><em>*Data diambil dari hasil analitik Google terbaru.</em></p>
+                <p style="font-size: 13px; color: var(--text-muted); font-style: italic;">*Catatan: Akses tombol kontak interaktif (Live Link WA untuk reservasi pasien) adalah fitur khusus bagi Mitra berstatus VIP / VVIP yang akan ditawarkan secara terpisah setelah data Anda diverifikasi.</p>
             </div>
 
             <div class="card" style="border: 2px solid var(--primary); background-color: #fffafc; text-align: center;">
-                <h2 style="justify-content: center;">📝 Wajib: Konfirmasi Nominasi</h2>
-                <p>Bagi manajemen klinik yang namanya telah tercantum di portal rekomendasi kami, harap segera melakukan konfirmasi kepada Tim Redaksi.</p>
-                <p style="font-size: 14px; margin-bottom: 25px;">Konfirmasi ini diperlukan untuk <strong>Validasi Data Klinik, Menghindari Akun Palsu, dan Membuka Akses Tombol Reservasi WhatsApp</strong> Anda agar pasien dari Google dapat langsung menghubungi klinik Anda.</p>
+                <h2 style="justify-content: center;">📝 Amankan Slot Anda Sekarang</h2>
+                <p>Klik tombol di bawah ini untuk mengklaim posisi Anda dan mengirimkan data mentah profil klinik Anda ke WhatsApp Redaksi kami.</p>
 
-                <a href="https://wa.me/6285283212205?text=Halo%20Tim%20Redaksi%20CiledugPromo,%20kami%20dari%20Manajemen/Owner%20Klinik%20Kecantikan.%20Kami%20telah%20menerima%20surat%20nominasi%20Top%2010%20Klinik%20dan%20ingin%20melakukan%20konfirmasi%20data%20agar%20sensor%20WA%20kami%20dibuka.%20Mohon%20arahannya." class="btn-wa" target="_blank">
-                    KONFIRMASI NOMINASI KLINIK SAYA
+                <a href="https://wa.me/6285283212205?text=Halo%20Tim%20Redaksi%20CiledugPromo,%20kami%20dari%20Manajemen/Owner%20Klinik%20Kecantikan.%20Kami%20ingin%20mengklaim%20slot%20Nominasi%20Top%2010%20Klinik%20secara%20GRATIS.%20Berikut%20data%20kami..." class="btn-wa" target="_blank" style="margin-top: 20px;">
+                    KLAIM & KIRIM DATA KLINIK
                 </a>
+                
+                <p style="margin-top: 20px; font-size: 14px; color: var(--primary); font-weight: 800;">*Slot tersisa: 3 dari 10 Klinik (Siapa Cepat, Dia Dapat).</p>
             </div>
 
         </main>
